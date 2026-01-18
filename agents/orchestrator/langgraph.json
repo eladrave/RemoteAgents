@@ -1,0 +1,13 @@
+{
+  "python_version": "3.11",
+  "dependencies": [
+    "langgraph>=0.2.0",
+    "langgraph-sdk>=0.1.0",
+    "litellm>=1.52.0",
+    "python-dotenv>=1.0.1",
+    "PyYAML>=6.0.2"
+  ],
+  "graphs": {
+    "orchestrator": "src/app.py:graph"
+  }
+}

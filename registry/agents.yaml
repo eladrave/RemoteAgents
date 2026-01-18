@@ -1,0 +1,25 @@
+version: 1
+agents:
+  - id: orchestrator
+    name: Orchestrator
+    url: http://localhost:2024
+    capabilities:
+      - plan
+      - dispatch
+      - verify
+  - id: search
+    name: Search Agent
+    url: http://search:2025
+    capabilities:
+      - web_search
+  - id: code_interpreter
+    name: Code Interpreter Agent
+    url: http://code_interpreter:2026
+    capabilities:
+      - code_execution
+      - plotting
+  - id: document
+    name: Document Agent
+    url: http://document:2027
+    capabilities:
+      - pdf_generation

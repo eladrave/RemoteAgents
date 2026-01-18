@@ -1,0 +1,35 @@
+services:
+  orchestrator:
+    build:
+      context: ./agents/orchestrator
+    ports:
+      - "2024:2024"
+    env_file:
+      - ./agents/orchestrator/.env
+    volumes:
+      - ./registry:/app/registry:ro
+  search:
+    build:
+      context: ./agents/search
+    ports:
+      - "2025:2025"
+    env_file:
+      - ./agents/search/.env
+  code_interpreter:
+    build:
+      context: ./agents/code_interpreter
+    ports:
+      - "2026:2026"
+    env_file:
+      - ./agents/code_interpreter/.env
+    volumes:
+      - ./artifacts:/tmp/artifacts
+  document:
+    build:
+      context: ./agents/document
+    ports:
+      - "2027:2027"
+    env_file:
+      - ./agents/document/.env
+    volumes:
+      - ./artifacts:/tmp/artifacts
