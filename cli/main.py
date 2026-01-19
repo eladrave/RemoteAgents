@@ -20,6 +20,7 @@ async def main() -> None:
         headers["X-Auth-Scheme"] = auth_scheme
 
     client = get_client(url=orchestrator_url, api_key=api_key, headers=headers)
+    console.print(f"SDK client attributes: {[name for name in dir(client) if 'client' in name.lower()]}")
 
     console.print(Panel(f"Connected to orchestrator at {orchestrator_url}", title="RemoteAgents CLI"))
     thread = await client.threads.create()

@@ -19,3 +19,8 @@ Current status:
 - All changes are uncommitted in git.
 - Containers can be started with docker compose; CLI runs via .venv at /Users/eladrave/git/RemoteAgents/.venv/bin/python.
 - Requested action: commit and push all changes.
+
+2026-01-19 16:09:04 UTC
+Summary:
+- Added a debug log in cli/main.py to print SDK client attributes containing "client".
+- Requested action: commit and push latest change.
